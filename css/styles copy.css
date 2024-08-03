@@ -1,0 +1,369 @@
+:root {
+    --primary: #082C50;
+    --secondary: #FE9900;
+    --bottom: #E4EDF5;
+}
+
+body {
+    background-color: var(--bottom);
+}
+
+/* Estilo para el sidebar */
+.sidebar {
+    z-index: 1050;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 75px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye el espacio uniformemente */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Estilo para cada opción en el sidebar */
+.sidebar a {
+    z-index: 1050;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    color: white;
+    /* Asegura que el texto sea blanco */
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    /* Asegura que el enlace ocupe todo el ancho del sidebar */
+    text-align: center;
+    /* Centra el texto dentro del enlace */
+
+}
+
+.sidebar a.activate {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 50px;
+}
+
+
+
+.mensage {
+    visibility: hidden;
+    z-index: 1050;
+    /* Un valor muy alto para asegurar que esté en la parte superior */
+    position: fixed;
+    right: 80px;
+    top: 5%;
+    background-color: #082C50;
+    padding: 8px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mensage1 {
+    visibility: hidden;
+    z-index: 1050;
+    position: fixed;
+    right: 80px;
+    top: 31.5%;
+    transform: translateY(-50%);
+    background-color: #082C50;
+    padding: 8px 20px 8px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 105px;
+}
+
+.mensage2 {
+    visibility: hidden;
+    z-index: 1050;
+    position: fixed;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #082C50;
+    padding: 8px 20px 8px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: auto;
+}
+
+.mensage3 {
+    visibility: hidden;
+    z-index: 1050;
+    position: fixed;
+    right: 80px;
+    top: 70%;
+    transform: translateY(-50%);
+    background-color: #082C50;
+    padding: 8px 20px 8px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: auto;
+}
+
+.mensage4 {
+    visibility: hidden;
+    z-index: 1050;
+    position: fixed;
+    right: 80px;
+    top: 89%;
+    transform: translateY(-50%);
+    background-color: #082C50;
+    padding: 8px 20px 8px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: auto;
+}
+
+.sidebar a:hover .mensage,
+.sidebar a:hover .mensage1,
+.sidebar a:hover .mensage2,
+.sidebar a:hover .mensage3,
+.sidebar a:hover .mensage4 {
+    z-index: 1060;
+    /* Aumenta el z-index de los mensajes */
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .content#Inicio .row {
+    height: 100vh;
+}
+
+#fotoperfil {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.btn_primary {
+    margin: 10px 0 10px 0;
+    background-color: #082C50;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn_secondary {
+    margin: 10px 0 10px 0;
+    background-color: #FE9900;
+    color: var(--bottom);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.text_secondary {
+    padding: 0px 10px;
+    color: var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.h1 {
+    color: var(--primary);
+}
+
+.title {
+    padding-left: 8px;
+    color: var(--primary);
+    border-left: 11px solid var(--secondary);
+    border-radius: 10px;
+
+}
+
+.col-sm-6 .card.detail {
+    height: 450px;
+}
+
+.content_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Espacio entre las imágenes */
+}
+
+.icon_img {
+    max-width: 100%;
+    max-height: 100px;
+    /* Ajusta esta altura según tus necesidades */
+    height: auto;
+    width: auto;
+}
+
+.btn_info {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.card {
+    padding: 10px;
+    border-radius: 25px;
+    margin: 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.col-sm-6 .card {
+    height: 300px;
+    margin: 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.col-sm-6 .card.project {
+    height: 510px;
+}
+
+.col-sm-6 .card.contact {
+    height: 215px;
+}
+
+.card-body.detail {
+    height: 300px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+center svg {
+    color: var(--primary);
+
+}
+
+p a {
+    font-size: 14px;
+}
+
+input,
+textarea {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.tecno_usa {
+    margin: 3px 0px;
+    font-size: 12px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.col-auto .btn {
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.carousel-item .d-block {
+    border-radius: 20px;
+    height: auto;
+}
+
+
+
+.content#Sobremí,
+.content#Skills,
+.content#Contacto {
+    height: 100vh;
+}
+
+@media(max-height: 900px) {
+    .container .content#Inicio .row {
+        height: auto;
+    }
+
+    .col-sm-6 .card {
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .col-sm-6 .card.contact {
+        margin: 0;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .content#Sobremí,
+    .content#Skills,
+    .content#Contacto {
+        height: auto;
+    }
+
+    .content#Contacto {
+        margin-bottom: 80px;
+    }
+
+    .sidebar {
+        z-index: 1050;
+        position: fixed;
+        bottom: 0;
+        /* Fija el sidebar al fondo de la pantalla */
+        right: 0;
+        height: 75px;
+        width: 100%;
+        /* Ocupa todo el ancho de la pantalla */
+        display: flex;
+        flex-direction: row;
+        /* Alinea los iconos horizontalmente */
+        justify-content: space-around;
+        /* Distribuye uniformemente el espacio entre los iconos */
+        align-items: center;
+        /* Centra verticalmente los iconos */
+        background-color: var(--primary);
+        color: white;
+        padding: 10px;
+        border-radius: 30px 30px 0 0;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        transform: none;
+        top: auto;
+    }
+
+    .mensage,
+    .mensage1,
+    .mensage2,
+    .mensage3,
+    .mensage4 {
+        display: none;
+    }
+
+    .h1 {
+        margin-top: 20px;
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1040px;
+    }
+}
