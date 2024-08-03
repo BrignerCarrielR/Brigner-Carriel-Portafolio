@@ -901,28 +901,35 @@
                                 </svg>
                             </h5>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label fw-bold">Nombre</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="nombre apellido">
+                                <label for="nombres" class="form-label fw-bold">Nombre</label>
+                                <input type="text" class="form-control" id="nombres" placeholder="nombre apellido">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label fw-bold">Correo
+                                <label for="correo" class="form-label fw-bold">Correo
                                     Electronico</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="nombre@ejemplo.com">
+                                <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label fw-bold">Mensaje</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="3"
                                     placeholder="Mensaje..."></textarea>
                             </div>
-                            <button class="btn btn_primary form-control rounded-pill">Enviar</button>
+                            <button class="btn btn_primary form-control rounded-pill"
+                                onclick="EnviarCorreo()">Enviar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!------Enviar correo------------------------------------------------------------------------------------>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('MSBVq_POAKjwB1Ucr')
+    </script>
 
 
     <!------------------------------------------------------------------------------------------------------>

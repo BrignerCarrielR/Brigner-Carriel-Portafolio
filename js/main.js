@@ -22,3 +22,32 @@ document.addEventListener('DOMContentLoaded', function () {
         return new bootstrap.Popover(popoverTriggerEl);
     });
 });
+
+
+function EnviarCorreo() {
+    let nombres = document.getElementById('nombres').value
+    let correo = document.getElementById('correo').value
+    let mensaje = document.getElementById('mensaje').value
+    console.log(nombres, correo, mensaje)
+
+    // Envía el correo utilizando EmailJS
+    const serviceID = 'service_atvwoci';
+    const templateID = 'template_gxjy74d';
+    const userID = 'MSBVq_POAKjwB1Ucr';
+    // Define los datos del correo
+    const dataCorreo = {
+        nombres: nombres, // Utiliza el nombre del cliente
+        mensaje: mensaje,
+        correo: correo, // Utiliza el correo del cliente
+    };
+
+    // Envía el correo utilizando EmailJS
+    emailjs.send(serviceID, templateID, dataCorreo, userID)
+        .then(function (response) {
+            console.log('Correo enviado con éxito:', response);
+        })
+        .catch(function (error) {
+            console.error('Error al enviar el correo:', error);
+        });
+}
+
