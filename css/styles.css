@@ -289,6 +289,13 @@ textarea {
     height: 100vh;
 }
 
+@media (max-width: 767px) {
+    .content#Contacto {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     #fotoperfil {
         margin-top: 20px;
@@ -301,10 +308,6 @@ textarea {
     .col-sm-6 .card {
         height: auto;
         padding: 5px 0;
-    }
-
-    .col-sm-6 .card.contact {
-        margin: 0;
     }
 
     .card {
