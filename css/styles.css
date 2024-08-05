@@ -221,7 +221,6 @@ body {
 }
 
 .card {
-    padding: 10px;
     border-radius: 25px;
     margin: 10px 0px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -237,12 +236,16 @@ body {
     height: 510px;
 }
 
+.card-title.title.col {
+    margin-left: 11px;
+}
+
 .col-sm-6 .card.contact {
     height: 215px;
 }
 
 .card-body.detail {
-    height: 300px;
+    height: 450px;
 }
 
 p {
@@ -289,12 +292,6 @@ textarea {
     height: 100vh;
 }
 
-@media (max-width: 767px) {
-    .content#Contacto {
-        width: 100%;
-        margin-bottom: 80px;
-    }
-}
 
 @media only screen and (max-width: 900px) {
     #fotoperfil {
@@ -361,6 +358,10 @@ textarea {
     .h1 {
         margin-top: 20px;
         color: var(--primary);
+    }
+
+    .card-body.detail {
+        height: auto;
     }
 }
 

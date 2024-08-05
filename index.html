@@ -830,7 +830,7 @@
                                                 d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                                         </svg>
                                     </center>
-                                    <p class="card-text text-center fw-bold">Nuemro de Teléfono <br>
+                                    <p class="card-text text-center fw-bold">Número de Teléfono <br>
                                         <a href="#Contacto">0962164367</a>
                                     </p>
                                 </div>
@@ -888,8 +888,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card detail">
+                <div class="col-md-6 col-12 mb-3 ">
+                    <div class="card detail envio_mensaje ">
                         <div class="card-body detail">
                             <h5 class="card-title fw-bold title">Enviar Correo
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -915,7 +915,7 @@
                                     placeholder="Mensaje..."></textarea>
                             </div>
                             <button class="btn btn_primary form-control rounded-pill"
-                                onclick="EnviarCorreo()">Enviar</button>
+                                onclick="validarYEnviarCorreo()">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -924,7 +924,89 @@
     </div>
 
 
+    <!-- Modales -->
+    <!-- Modal para correo exitoso -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-success" id="successModalLabel">Correo exitoso</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="250" height="250"
+                        viewBox="0 0 50 50">
+                        <polygon fill="#61ff7b"
+                            points="39,16.917 29,6.525 19,5.37 12,9.411 8,18.649 12,32.34 22,42.898 32,44.053 39,40.011 43,30.773">
+                        </polygon>
+                        <polygon fill="#57e66f" points="12,9.412 19,5.37 29,6.525 22,10.566"></polygon>
+                        <polygon fill="#4ecc62" points="32,20.959 39,16.917 29,6.525 22,10.566"></polygon>
+                        <polygon fill="#44b356" points="32,44.053 39,40.011 43,30.774 36,34.815"></polygon>
+                        <polygon fill="#49bf5c" points="32,20.959 39,16.917 43,30.774 36,34.815"></polygon>
+                        <polygon fill="#44b356"
+                            points="19.921,29.087 14.921,20.427 12.921,21.581 20,33.66 30.921,27.355 28.921,23.891">
+                        </polygon>
+                    </svg>
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn_primary col col-5 rounded-pill"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para correo fallido-->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="errorModalLabel">Correo fallido</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="250" height="250"
+                        viewBox="0 0 48 48">
+                        <linearGradient id="wRKXFJsqHCxLE9yyOYHkza_fYgQxDaH069W_gr1" x1="9.858" x2="38.142" y1="9.858"
+                            y2="38.142" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#f44f5a"></stop>
+                            <stop offset=".443" stop-color="#ee3d4a"></stop>
+                            <stop offset="1" stop-color="#e52030"></stop>
+                        </linearGradient>
+                        <path fill="url(#wRKXFJsqHCxLE9yyOYHkza_fYgQxDaH069W_gr1)"
+                            d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                        <path
+                            d="M33.192,28.95L28.243,24l4.95-4.95c0.781-0.781,0.781-2.047,0-2.828l-1.414-1.414	c-0.781-0.781-2.047-0.781-2.828,0L24,19.757l-4.95-4.95c-0.781-0.781-2.047-0.781-2.828,0l-1.414,1.414	c-0.781,0.781-0.781,2.047,0,2.828l4.95,4.95l-4.95,4.95c-0.781,0.781-0.781,2.047,0,2.828l1.414,1.414	c0.781,0.781,2.047,0.781,2.828,0l4.95-4.95l4.95,4.95c0.781,0.781,2.047,0.781,2.828,0l1.414-1.414	C33.973,30.997,33.973,29.731,33.192,28.95z"
+                            opacity=".05"></path>
+                        <path
+                            d="M32.839,29.303L27.536,24l5.303-5.303c0.586-0.586,0.586-1.536,0-2.121l-1.414-1.414	c-0.586-0.586-1.536-0.586-2.121,0L24,20.464l-5.303-5.303c-0.586-0.586-1.536-0.586-2.121,0l-1.414,1.414	c-0.586,0.586-0.586,1.536,0,2.121L20.464,24l-5.303,5.303c-0.586,0.586-0.586,1.536,0,2.121l1.414,1.414	c0.586,0.586,1.536,0.586,2.121,0L24,27.536l5.303,5.303c0.586,0.586,1.536,0.586,2.121,0l1.414-1.414	C33.425,30.839,33.425,29.889,32.839,29.303z"
+                            opacity=".07"></path>
+                        <path fill="#fff"
+                            d="M31.071,15.515l1.414,1.414c0.391,0.391,0.391,1.024,0,1.414L18.343,32.485	c-0.391,0.391-1.024,0.391-1.414,0l-1.414-1.414c-0.391-0.391-0.391-1.024,0-1.414l14.142-14.142	C30.047,15.124,30.681,15.124,31.071,15.515z">
+                        </path>
+                        <path fill="#fff"
+                            d="M32.485,31.071l-1.414,1.414c-0.391,0.391-1.024,0.391-1.414,0L15.515,18.343	c-0.391-0.391-0.391-1.024,0-1.414l1.414-1.414c0.391-0.391,1.024-0.391,1.414,0l14.142,14.142	C32.876,30.047,32.876,30.681,32.485,31.071z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text-stard m-4">
+                    <h5>Mensaje:</h5>
+                    <p id="modalErrorMessage" class="text-danger"></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn_primary col col-5 rounded-pill"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!------Enviar correo------------------------------------------------------------------------------------>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
